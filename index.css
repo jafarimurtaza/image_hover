@@ -1,0 +1,67 @@
+body {
+ background-color: #000;
+ font-family: sans-serif;
+}
+.container {
+ position: absolute;
+ display: block;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 600px;
+ height: 300px;
+ background-image: url('./background.jpg');
+ background-position: center;
+ background-size: 100% 100%;
+ padding: 1em;
+ overflow: hidden;
+ transition:all .9s;
+}
+.container:before {
+   position: absolute;
+   content: "";
+  top: 1em;
+  left: 2em;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: all .9s;
+}
+.container:after {
+   position: absolute;
+   content: "";
+  bottom: 1em;
+  right: 2em;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: all  .9s;
+}
+
+h1 {
+ position: absolute;
+ left: 1em;
+ top: 2em;
+ transform: translate(-135%);
+ transition: all .9s;
+ color: #fff;
+}
+
+p {
+ position: absolute;
+ left: 1em;
+ top: 0.5em;
+ transform: translate(-135%);
+ transition: all .9s;
+ color: #fff;
+}
+.container:hover {
+ background-size: 120%  120%;
+}
+.container:hover h1, .container:hover p {
+ transform: translate(0%);
+}
+.container:hover:before, .container:hover:after {
+ width: 85%;
+}
+
